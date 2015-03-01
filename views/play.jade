@@ -1,12 +1,11 @@
 doctype html
 html(lang="en")
   head
-    title Twiliopera
+    title Twiliopera - Listen
     // We use Twitter Bootstrap as the default styling for our page
-    link(rel='stylesheet', 
-      href='//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css')
-    link(rel='stylesheet', 
-      href='//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css')
+    link(rel='stylesheet', href='//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css')
+    link(rel='stylesheet', href='//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
 
   body
     .container
@@ -15,7 +14,6 @@ html(lang="en")
     script.
       //console.log(!{JSON.stringify(Digits)})
       var clean_digits = !{JSON.stringify(Digits)}
-
 
     // Include page dependencies
     script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')

@@ -1,13 +1,12 @@
 doctype html
 html(lang="en")
   head
-    title Twiliopera
+    title Twiliopera - Record
 
     // We use Twitter Bootstrap as the default styling for our page
-    link(rel='stylesheet', 
-      href='//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css')
-    link(rel='stylesheet', 
-      href='//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css')
+    link(rel='stylesheet', href='//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css')
+    link(rel='stylesheet', href='//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
 
   body
     .container
@@ -17,13 +16,19 @@ html(lang="en")
 
       // phone number
       .row
-        .col-md-12
+        .col-md-4
+        .col-md-4.text-center
           form(id='numberForm', role='form')
             .form-group
-            .form-group
               input.form-control(type='text', id='phoneNumber', 
-                placeholder='(555) 555-5555')
-            button(type='submit', class='btn btn-default') Call Me!
+                placeholder='5555555555')
+            button(type='submit', class='btn btn-danger') Call Me!
+        .col-md-4
+      .row
+        .col-md-4
+        .col-md-4.text-center
+          img(src='/images/midi.png')
+        .col-md-4
 
     // Include page dependencies
     script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')

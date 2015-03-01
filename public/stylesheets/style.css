@@ -1,8 +1,18 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 18px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: white	;
+  background-image: url('/images/congruent_outline.png');
 }
-
 a {
   color: #00B7FF;
+}
+h1{
+	text-align: center;
+}
+p{
+	text-align: center;
+}
+button{
+	text-align: center;
 }
