@@ -46,10 +46,12 @@ router.post('/outbound', function(req, res) {
 //response ends so that Twilio does not receive a response and crash 
 router.post('/song', function(req, res) {
     digits = req.body.Digits; //IT WORKS
+	console.log(digits + " in post");
     res.end();
 });
 
 router.get('/song', function(req, res) {
+	console.log(digits + " in get");
     res.render('play', {Digits: digits}); 
 });
 

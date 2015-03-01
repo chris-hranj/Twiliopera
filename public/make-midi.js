@@ -1,1 +1,1 @@
-document.write(JSON.stringify(Digits))
+console.log("IN MAKE MIDI: " + clean_digits);
