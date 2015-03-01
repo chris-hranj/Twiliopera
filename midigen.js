@@ -8,7 +8,7 @@ module.exports = function (digits, callback) {
   file.addTrack(track)
 
   for (var i = 0; i < l; i++) { 
-    switch (i) { 
+    switch (digits[i]) { 
       case '1': 
         track.addNote(0, 'c4', 64)
         break
