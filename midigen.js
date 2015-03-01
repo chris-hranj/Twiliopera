@@ -6,10 +6,10 @@ module.exports = function (digits, callback) {
     , file = new Midi.File()
     , track = new Midi.Track()
   file.addTrack(track)
-  console.log("Length: " + l);
+  //console.log("Length: " + l);
 
   for (var i = 0; i < l; i++) {
-    console.log("LOGGING I: " + digits[i]);
+    //console.log("LOGGING I: " + digits[i]);
     switch (digits[i]) { 
       case '1': 
         track.addNote(0, 'c4', 64)
@@ -49,7 +49,7 @@ module.exports = function (digits, callback) {
         break
     }
   }
-  fs.writeFile('test222.mid', file.toBytes(), 'binary', function (err) { 
+  fs.writeFile('output.mid', file.toBytes(), 'binary', function (err) { 
     if (err) {
       console.log('err : ' + err)  
       callback(err)
