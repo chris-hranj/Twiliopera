@@ -52,7 +52,7 @@ router.post('/song', function(req, res) {
 });
 
 router.get('/song', function(req, res) {
-    //generating MIDI
+
     res.render('play', {Digits: digits}); 
 });
 
