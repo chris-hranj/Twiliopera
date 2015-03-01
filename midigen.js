@@ -47,7 +47,7 @@ module.exports = function (digits, callback) {
         break
     }
   }
-  fs.writeFile('test.mid', file.toBytes(), function (err) { 
+  fs.writeFile('test.mid', file.toBytes(), 'binary', function (err) { 
     if (err) {
       console.log('err : ' + err)  
       callback(err)
