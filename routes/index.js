@@ -2,6 +2,7 @@ var path = require('path');
 var express = require('express');
 var router = express.Router();
 var bodyParser = require('body-parser');
+var midigen = require('../midigen');
 
 //require the Twilio module and create a REST client
 var twilioClient = require('twilio')('ACcc9ae9a1fb1643a9135672c5d64caf09', '4c773e30cc75d66cef82fbe0349d9852');
@@ -46,10 +47,12 @@ router.post('/outbound', function(req, res) {
 //response ends so that Twilio does not receive a response and crash 
 router.post('/song', function(req, res) {
     digits = req.body.Digits; //IT WORKS
+    midigen(digits);
     res.end();
 });
 
 router.get('/song', function(req, res) {
+    //generating MIDI
     res.render('play', {Digits: digits}); 
 });
 
