@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+	<Gather timeout="12" finishOnKey="*" action="http://1d49dd55.ngrok.com/song">
+	    <Say>Enter your melody using the keypad. Press start to end.</Say>
+	</Gather>
+	<Hangup/>
+</Response>
