@@ -45,6 +45,7 @@ router.post('/outbound', function(req, res) {
 // 
 router.post('/song', function(req, res) {
     console.log(req.body.Digits); //IT WORKS
+    res.render('play', {Digits: req.body.Digits});
 });
 
 module.exports = router;
