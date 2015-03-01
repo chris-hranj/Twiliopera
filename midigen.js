@@ -27,10 +27,10 @@ module.exports = function (digits, callback) {
         track.addNote(0, 'g4', 64)
         break
       case '6': 
-        track.addNote(0, 'a5', 64)
+        track.addNote(0, 'a4', 64)
         break
       case '7':
-        track.addNote(0, 'b5', 64)
+        track.addNote(0, 'b4', 64)
         break
       case '8': 
         track.addNote(0, 'c5', 64)
