@@ -21,7 +21,7 @@ router.post('/call', function(req, res) {
     // Place an outbound call to the user, using the TwiML instructions
     // from the /outbound route
     twilioClient.makeCall({
-        to: req.body.phoneNumber,
+        to: "+1" + req.body.phoneNumber,
         from: '+19087511961',
         applicationSid: 'APcc31525a40b4ca683824a79f134bcc0f'
     }, function(err, message) {
