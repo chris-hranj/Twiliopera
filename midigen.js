@@ -1,12 +1,26 @@
 var Midi = require('jsmidgen')
   , fs = require('fs')
 
-module.exports = function (digits, callback) {
+module.exports = function (digits, instrument, callback) {
   var l = digits.length
     , file = new Midi.File()
     , track = new Midi.Track()
   file.addTrack(track)
-  track.setInstrument(0, 0x25)
+
+  switch (instrument) { 
+    case 'guitar': 
+      track.setInstrument(0, 0x25)
+      break
+    case 'piano':
+      track.setInstrument(0, 0x01)
+      break
+    case 'sax': 
+      track.setInstrument(0, 0x65)
+      break
+    case 'square': 
+      track.setInstrument(0, 0x81)
+      break
+  }
   //console.log("Length: " + l);
 
   for (var i = 0; i < l; i++) {

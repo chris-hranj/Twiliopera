@@ -14,13 +14,14 @@ router.get('/', function(req, res) {
 });
 
 // Handle an AJAX POST request to place an outbound call
+var instrument
 router.post('/call', function(req, res) {
     // This should be the publicly accessible URL for your application
     // Here, we just use the host for the application making the request,
     // but you can hard code it or use something different if need be
     // Place an outbound call to the user, using the TwiML instructions
     // from the /outbound route
-    console.log(req.body.instrument)
+    instrument = req.body.instrument
     twilioClient.makeCall({
         to: "+1" + req.body.phoneNumber,
         from: '+19087511961',
@@ -48,7 +49,7 @@ router.post('/outbound', function(req, res) {
 //response ends so that Twilio does not receive a response and crash 
 router.post('/song', function(req, res) {
     digits = req.body.Digits; //IT WORKS
-    mg(req.body.Digits, function(err){
+    mg(req.body.Digits, instrument, function(err){
         if(err)
             console.log(err);
     })
