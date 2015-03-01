@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Response>
-	<Gather timeout="10" finishOnKey="" action="http://1d49dd55.ngrok.com/song">
+	<Gather timeout="15" finishOnKey="" action="http://1d49dd55.ngrok.com/song">
 	    <Say>Enter your melody using the keypad. Hangup when you finish.</Say>
 	</Gather>
 </Response>
