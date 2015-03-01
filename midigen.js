@@ -6,6 +6,7 @@ module.exports = function (digits, callback) {
     , file = new Midi.File()
     , track = new Midi.Track()
   file.addTrack(track)
+  track.setInstrument(0, 0x25)
   //console.log("Length: " + l);
 
   for (var i = 0; i < l; i++) {
@@ -49,7 +50,7 @@ module.exports = function (digits, callback) {
         break
     }
   }
-  fs.writeFile('output.mid', file.toBytes(), 'binary', function (err) { 
+  fs.writeFile('./public/output.mid', file.toBytes(), 'binary', function (err) { 
     if (err) {
       console.log('err : ' + err)  
       callback(err)

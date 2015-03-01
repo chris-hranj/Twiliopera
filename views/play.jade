@@ -10,13 +10,13 @@ html(lang="en")
 
   body
     .container
-      .p This page contains the song you just recorded. 
+    .p This page contains the song you just recorded. 
+    a(href='#' onClick="MIDIjs.play('/output.mid')") play the song!
 
     script.
-      //console.log(!{JSON.stringify(Digits)})
       var clean_digits = !{JSON.stringify(Digits)}
 
 
     // Include page dependencies
     script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
-    script(src='/make-midi.js')
+    script(src='http://www.midijs.net/lib/midi.js')
