@@ -14,24 +14,33 @@ html(lang="en")
       p.
         Enter your phone number and receieve a call which you can turn into a song.
 
-      // phone number
+      // phone number form
       .row
         .col-md-4
         .col-md-4.text-center
           form(id='numberForm', role='form')
             .form-group
               input.form-control(type='text', id='phoneNumber', 
-                placeholder='5555555555')
-              select(id='instrument')
-                option(value='guitar') guitar
-                option(value='piano') accoustic grand piano
-                option(value='sax') soprano sax
-                option(value='square') lead 1 square
-            button(type='submit', class='btn btn-danger') Call Me!
+                placeholder='(666) 420-1337')
+            
         .col-md-4
       .row
         .col-md-4
         .col-md-4.text-center
+          select(id='instrument')
+            option(value='piano') Accoustic Grand Piano
+            option(value='guitar') Guitar
+            option(value='sax') Soprano Sax
+            option(value='square') Square
+          br
+          br
+          button(type='submit', class='btn-lg btn-success') Call Me!
+        .col-md-4
+      .row
+        .col-md-4
+        .col-md-4.text-center
+          br
+          button(type="button" class='btn-lg btn-danger', onclick="window.open('/song');") Click Here After Call!
           img(src='/images/midi.png')
         .col-md-4
 

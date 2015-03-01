@@ -9,11 +9,19 @@ html(lang="en")
 
   body
     .container
-    .p This page contains the song you just recorded. 
-    a(href='#' onClick="MIDIjs.play('/output.mid')") play the song!
-
-    script.
-      var clean_digits = !{JSON.stringify(Digits)}
+        h1 Twiliopera
+        .row
+            .col-md-2
+            .col-md-8
+                p.
+                    This page contains the song you just recorded.
+            .col-md-2
+        .row
+            .col-md-4
+            .col-md-4
+                a(href='#')
+                    img(id='play' src='/images/play.png' onClick="MIDIjs.play('/output.mid')")
+            .col-md-r
 
     // Include page dependencies
     script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')

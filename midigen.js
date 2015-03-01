@@ -7,18 +7,19 @@ module.exports = function (digits, instrument, callback) {
     , track = new Midi.Track()
   file.addTrack(track)
 
+  console.log(instrument);
   switch (instrument) { 
-    case 'guitar': 
-      track.setInstrument(0, 0x25)
-      break
     case 'piano':
       track.setInstrument(0, 0x01)
       break
+    case 'guitar': 
+      track.setInstrument(0, 0x19)
+      break
     case 'sax': 
-      track.setInstrument(0, 0x65)
+      track.setInstrument(0, 0x41)
       break
     case 'square': 
-      track.setInstrument(0, 0x81)
+      track.setInstrument(0, 0x51)
       break
   }
   //console.log("Length: " + l);
