@@ -1,3 +1,4 @@
+var config = require('../config');
 var path = require('path');
 var express = require('express');
 var router = express.Router();
@@ -5,7 +6,7 @@ var bodyParser = require('body-parser');
 var mg = require('../midigen');
 
 //require the Twilio module and create a REST client
-var twilioClient = require('twilio')('ACcc9ae9a1fb1643a9135672c5d64caf09', '4c773e30cc75d66cef82fbe0349d9852');
+var twilioClient = require('twilio')(config.accountSid, config.authToken);
 
 var digits;
 /* GET home page. */
@@ -14,18 +15,16 @@ router.get('/', function(req, res) {
 });
 
 // Handle an AJAX POST request to place an outbound call
-var instrument
+var instrument;
 router.post('/call', function(req, res) {
-    // This should be the publicly accessible URL for your application
-    // Here, we just use the host for the application making the request,
-    // but you can hard code it or use something different if need be
     // Place an outbound call to the user, using the TwiML instructions
     // from the /outbound route
     instrument = req.body.instrument
+
     twilioClient.makeCall({
         to: "+1" + req.body.phoneNumber,
-        from: '+19087511961',
-        applicationSid: 'APcc31525a40b4ca683824a79f134bcc0f'
+        from: config.twilioNumber,
+        applicationSid: config.applicationSid
     }, function(err, message) {
         if (err) {
         	console.log(err);
