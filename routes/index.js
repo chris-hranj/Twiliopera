@@ -19,7 +19,7 @@ var instrument;
 router.post('/call', function(req, res) {
     // Place an outbound call to the user, using the TwiML instructions
     // from the /outbound route
-    instrument = req.body.instrument
+    instrument = req.body.instrument;
 
     twilioClient.makeCall({
         to: "+1" + req.body.phoneNumber,
@@ -49,8 +49,7 @@ router.post('/outbound', function(req, res) {
 router.post('/song', function(req, res) {
     digits = req.body.Digits; //IT WORKS
     mg(req.body.Digits, instrument, function(err){
-        if(err)
-            console.log(err);
+        if (err) console.log(err);
     })
     res.end();
 });
